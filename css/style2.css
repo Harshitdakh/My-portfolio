@@ -1,0 +1,79 @@
+body{
+    background-color: black;
+    color: white;
+}
+a{
+    color: white;
+    justify-content: center;
+    display: flex;
+    font-size: 200%;
+    text-decoration: underline;
+    margin-top: 50px;
+
+    text-decoration: none;
+    color: #e1e1e1;
+    text-shadow: 2px 2px 5px #acb32a4c;
+    filter: drop-shadow(0 0 100px #c9c73b);  
+
+}
+
+a:hover{
+
+    transform: scale(0.95);
+    color: #cfc59e;
+    text-shadow: 2px 2px 5px #acb32a4c;
+    filter: drop-shadow(0 0 77px #e5e4ba);  
+}
+
+body{
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.content{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  
+    width: 60%;
+    gap: 40px;
+
+   margin: auto;
+   margin-right: 0;
+   margin-top: 50px;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    margin-left: 50px;
+   top:30% ;
+   font-size: 50px;
+   color: #866c03;
+   text-shadow: 2px 2px 5px #acb32a4c;
+   filter: drop-shadow(0 0 77px #c9c73b);  
+}
+header:hover{
+    color: #cfc59e;
+    text-shadow: 2px 2px 5px #acb32a4c;
+    filter: drop-shadow(0 0 77px #e5e4ba);  
+  
+}
+.card{
+    border: 2px solid white;
+    border-radius: 33px;
+
+    /* From https://css.glass */
+background: rgba(227, 194, 51, 0.23);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.5px);
+-webkit-backdrop-filter: blur(7.5px);
+border: 1px solid rgba(227, 194, 51, 0.3);
+padding: 10px 20px;
+box-shadow:rgba(217, 255, 1, 0.25) -1px 1px 55px, rgba(255, 255, 0, 0.12) 0px -12px 30px, rgba(208, 255, 0, 0.12) 0px 4px 6px, rgba(251, 255, 0, 0.17) 0px 12px 13px, rgba(251, 255, 0, 0.09) 0px -3px 5px;
+
+}

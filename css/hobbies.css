@@ -1,0 +1,147 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #000000;
+    color: #ee8686;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ffe1df;
+    margin: 0;
+}
+
+.hobbies {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hobbies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #ff416c;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+.hobby-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.hobby {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 9px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hobby img {
+    width: 170px;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #ff416c;
+}
+
+.hobby h3 {
+    font-size: 1rem;
+    margin: 20px 0 10px;
+    color: #ff416c;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hobby p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 20px 20px;
+    line-height: 1.6;
+}
+
+.hobby .btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.hobby .btn:hover {
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+footer a {
+    color: #ff416c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hobby-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .hobbies h2 {
+        font-size: 2rem;
+    }
+}

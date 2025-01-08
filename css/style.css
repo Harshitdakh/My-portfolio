@@ -1,0 +1,171 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #000000;
+  color: #ee8686;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffa500;
+}
+
+/* Banner */
+.banner {
+  /* position: relative; */
+  /* z-index: -2; */
+  /* height: 100px; */
+  text-align: center;
+  margin: 20px 0;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Introduction Section */
+.intro {
+  padding: 20px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 20px;
+  color: #000000;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  width: 100vw;
+  height: 29px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  padding: 10px 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* General Navigation Styling */
+nav {
+  background: #4e54c8;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu>li {
+  position: relative;
+}
+
+.menu>li>a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu>li>a:hover {
+  background: #ffdd57;
+  color: #333;
+  border-radius: 5px;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #8f94fb;
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dropdown li {
+  padding: 5px 20px;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown li a:hover {
+  background: #ffdd57;
+  color: #333;
+  border-radius: 5px;
+}
+
+/* Display Dropdown on Hover */
+.menu li:hover .dropdown {
+  display: block;
+}

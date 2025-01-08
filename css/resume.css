@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ac7d7d;
+    color: #000000;
+}
+
+header h1 {
+    background: #000000;
+    color: #ee8686;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f7ed5c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+h1,
+h2 {
+    color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+ul,
+table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+ul li:before {
+    content: "•";
+    color: #0056b3;
+    position: absolute;
+    left: -20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table th,
+table td {
+    border: 2px solid #000000;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+    }
+}
