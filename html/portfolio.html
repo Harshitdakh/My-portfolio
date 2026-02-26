@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio | Harshit Dakh</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <header>
-            <nav>
-                <ul class="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./about.html">About Me</a></li>
-                    </li>
-                    <li>
-                        <a href="#">Gallery</a>
-                        <ul class="dropdown">
-                            <li><a href="./moment.html">Best Moment</a></li>
-                            <li><a href="./gallery.html">Photo Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li>
-                        <a href="#">More</a>
-                        <ul class="dropdown">
-                            <li><a href="./privacy.html">Privacy Policy</a></li>
-                            <li><a href="./faq.html">FAQ</a></li>
-                            <li><a href="./qualification.html">Qualification & Skills</a></li>
-                            <li><a href="./family.html">Family Details</a></li>
-                            <li><a href="./friends.html">Friends Details</a></li>
-                            <li><a href="./achievement.html">Achievements</a></li>
-                            <li><a href="./testimonials.html">Testimonials</a></li>
-                            <li><a href="./resume.html">My Resume</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./portfolio.html">My Portfolio</a></li>
-                            <li><a href="./hobbies.html">Hobbies</a></li>
-                            <li><a href="./github.html">GitHub</a></li>
-                            <li><a href="./privacy.html">Privacy Policy</a></li>
-                            <li><a href="./faq.html">FAQ</a></li>
-                            <li><a href="./resource.html">Resources Page</a></li>
-                            <li><a href="./projects.html">My Projects</a></li>
-                        </ul>
-                </ul>
-            </nav>
+   <nav class="navbar">
+    <div class="logo">HD<span>.</span></div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li> 
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        <li class="has-dropdown">
+            <a href="#">More ▾</a>
+            <ul class="dropdown">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+    <main class="portfolio-wrapper">
+        <header class="section-header">
+            <span class="badge">My Work</span>
+            <h2>Featured <span class="highlight">Projects</span></h2>
+            <p>A showcase of technical solutions blending AI, Web Development, and Design.</p>
         </header>
 
+        <section class="projects-grid">
+            <article class="project-card featured">
+                <div class="project-image">
+                    <img src="../img/milkhub.jpg" alt="MilkHub">
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Next.js</span>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>MilkHub</h3>
+                    <p>An integrated Dairy product website with responsive design and user-friendly interface.</p>
+                    <div class="project-links">
+                        <a href="https://frontend-six-kappa-89.vercel.app/" class="btn">Live Site</a>
+                        <a href="https://github.com/Harshitdakh/MilkHub" class="btn">View Source Code</a>
+                    </div>
+                </div>
+            </article>
 
-    </header>
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="../img/shop.jpg" alt="Shop Website">
+                </div>
+                <div class="project-info">
+                    <h3>Modern Shop Interface</h3>
+                    <p>A fully responsive e-commerce front-end with dynamic product filtering and cart logic.</p>
+                    <div class="project-links">
+                        <a href="../Projects/shop website/code/index.html" class="link-btn">View Project</a>
+                    </div>
+                </div>
+            </article>
 
-    <main>
-        <section class="portfolio">
-            <h2>My Projects</h2>
-            <div class="project">
-                <img src="../img/shop.jpg" alt="Project 1">
-                <h2>A shop Website</h2>
-            </div>
-            <div class="project">
-                <img src="../img/news.jpg" alt="Project 2">
-                <h2>News Page </h2>
-            </div>
-            </div>
+            <article class="project-card">
+                <div class="project-image">
+                    <img src="../img/news.jpg" alt="News Page">
+                </div>
+                <div class="project-info">
+                    <h3>Insight News Portal</h3>
+                    <p>Real-time news application utilizing external APIs to deliver global headlines instantly.</p>
+                    <div class="project-links">
+                        <a href="../Projects/WDASS2/index.html" class="link-btn">View Project</a>
+                    </div>
+                </div>
+            </article>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
+        <p>&copy; 2026 Harshit Dakh. All Rights Reserved.</p>
     </footer>
 </body>
-
 </html>

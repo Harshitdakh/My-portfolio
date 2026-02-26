@@ -1,15 +1,11 @@
-// Countdown for redirection
-let countdownElement = document.getElementById('countdown');
-let countdownTime = 5;
+let seconds = 5;
+const countdownElement = document.getElementById('countdown');
 
-
-const countdownInterval = setInterval(() =>
-{
-    countdownTime--;
-    countdownElement.textContent = countdownTime;
-
-    if (countdownTime <= 0) {
-        clearInterval(countdownInterval);
-        window.location.href = "../index.html"; // Redirect to home page
+const timer = setInterval(() => {
+    seconds--;
+    countdownElement.textContent = seconds;
+    if (seconds <= 0) {
+        clearInterval(timer);
+        window.location.href = "../index.html"; // Corrected path
     }
 }, 1000);

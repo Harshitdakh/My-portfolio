@@ -1,79 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testimonials</title>
-  <link rel="stylesheet" href="../css/testimonial.css">
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Harshit Dakh</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/testimonial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>Honest Review</h1>
-    <header>
-      <nav>
-        <ul class="menu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./about.html">About Me</a></li>
-          </li>
-          <li>
-            <a href="#">Gallery</a>
+   <nav class="navbar">
+    <div class="logo">HD<span>.</span></div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li> 
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        <li class="has-dropdown">
+            <a href="#">More ▾</a>
             <ul class="dropdown">
-              <li><a href="./moment.html">Best Moment</a></li>
-              <li><a href="./gallery.html">Photo Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
-          </li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li>
-            <a href="#">More</a>
-            <ul class="dropdown">
-              <li><a href="./privacy.html">Privacy Policy</a></li>
-              <li><a href="./faq.html">FAQ</a></li>
-              <li><a href="./qualification.html">Qualification & Skills</a></li>
-              <li><a href="./family.html">Family Details</a></li>
-              <li><a href="./friends.html">Friends Details</a></li>
-              <li><a href="./achievement.html">Achievements</a></li>
-              <li><a href="./testimonials.html">Testimonials</a></li>
-              <li><a href="./resume.html">My Resume</a></li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href="./portfolio.html">My Portfolio</a></li>
-              <li><a href="./hobbies.html">Hobbies</a></li>
-              <li><a href="./github.html">GitHub</a></li>
-              <li><a href="./privacy.html">Privacy Policy</a></li>
-              <li><a href="./faq.html">FAQ</a></li>
-              <li><a href="./resource.html">Resources Page</a></li>
-              <li><a href="./projects.html">My Projects</a></li>
-            </ul>
-        </ul>
-      </nav>
-    </header>
+        </li>
+    </ul>
+</nav>
+    <main class="testimonial-wrapper">
+        <header class="section-header">
+            <span class="badge">Social Proof</span>
+            <h2>Kind <span class="highlight">Words</span></h2>
+            <p>What mentors and peers have to say about our collaboration.</p>
+        </header>
 
+        <section class="testimonials-container">
+            <div class="testimonial-carousel">
+                <div class="testimonial active">
+                    <div class="quote-icon">“</div>
+                    <p>Harshit is an exceptional learner who consistently demonstrates a deep curiosity for AI. He is a standout student in every project we tackle.</p>
+                    <div class="reviewer-info">
+                        <h3>Nishant Sharma</h3>
+                        <span>Academic Peer</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="quote-icon">“</div>
+                    <p>He is a very sincere and obedient student. His dedication to mastering new technical skills is truly commendable.</p>
+                    <div class="reviewer-info">
+                        <h3>Dories Mathew</h3>
+                        <span>Mentor</span>
+                    </div>
+                </div>
+            </div>
 
-  </header>
-  <main>
-    <section class="testimonials-container">
-      <div class="testimonial-carousel">
-        <div class="testimonial active">
-          <p>"Harshit is a very good learner and also a very good student"</p>
-          <h3>- Nishant Sharma</h3>
-        </div>
-        <div class="testimonial">
-          <p>"He is very sencior and obdient student"</p>
-          <h3>- Dories Mathew</h3>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="prev">&lt;</button>
-        <button class="next">&gt;</button>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
-  </footer>
-  <script src="../js/testimonial.js"></script>
+            <div class="carousel-navigation">
+                <button class="nav-btn prev" onclick="changeSlide(-1)">←</button>
+                <button class="nav-btn next" onclick="changeSlide(1)">→</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Harshit Dakh. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/testimonial.js"></script>
 </body>
-
 </html>

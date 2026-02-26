@@ -1,80 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
-  <link rel="stylesheet" href="../css/about.css">
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Harshit Dakh | Journey & Skills</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header>
-    <h1>About Me</h1>
-    <header>
-      <nav>
-        <ul class="menu">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./about.html">About Me</a></li>
-          </li>
-          <li>
-            <a href="#">Gallery</a>
+  <nav class="navbar">
+    <div class="logo">HD<span>.</span></div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li> 
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        <li class="has-dropdown">
+            <a href="#">More ▾</a>
             <ul class="dropdown">
-              <li><a href="./moment.html">Best Moment</a></li>
-              <li><a href="./gallery.html">Photo Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
-          </li>
-          <li><a href="./contact.html">Contact</a></li>
-          <li>
-            <a href="#">More</a>
-            <ul class="dropdown">
-              <li><a href="./privacy.html">Privacy Policy</a></li>
-              <li><a href="./faq.html">FAQ</a></li>
-              <li><a href="./qualification.html">Qualification & Skills</a></li>
-              <li><a href="./family.html">Family Details</a></li>
-              <li><a href="./friends.html">Friends Details</a></li>
-              <li><a href="./achievement.html">Achievements</a></li>
-              <li><a href="./testimonials.html">Testimonials</a></li>
-              <li><a href="./resume.html">My Resume</a></li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href="./portfolio.html">My Portfolio</a></li>
-              <li><a href="./hobbies.html">Hobbies</a></li>
-              <li><a href="./github.html">GitHub</a></li>
-              <li><a href="./privacy.html">Privacy Policy</a></li>
-              <li><a href="./faq.html">FAQ</a></li>
-              <li><a href="./resource.html">Resources Page</a></li>
-              <li><a href="./projects.html">My Projects</a></li>
-            </ul>
-        </ul>
-      </nav>
-    </header>
+        </li>
+    </ul>
+</nav>
 
+    <main class="container">
+        <section class="about-hero">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="badge">Student & Developer</span>
+                    <h2>Hello, I'm <span class="highlight">Harshit Dakh</span></h2>
+                    <p>
+                        I am currently pursuing a <strong>B.Tech in CSE (AI)</strong> at Mandsaur University. I thrive at the intersection of logical programming and creative problem-solving. My journey is fueled by a passion for mastering modern tech stacks and exploring how AI can reshape our digital future.
+                    </p>
+                    <div class="stats-row">
+                        <div class="stat-item"><strong>2nd</strong> Year Student</div>
+                        <div class="stat-item"><strong>AI</strong> Enthusiast</div>
+                        <div class="stat-item"><strong>4th</strong> Semester</div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="image-wrapper">
+                        <img src="../img/harshit.jpg" alt="Harshit Dakh" class="about-image">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  </header>
-  <!-- About Me Section -->
-  <section class="about">
-    <h2>Hello, I'm Harshit Dakh</h2>
-    <p>
-      I am pursuing B.tech CSE AI, passionate about working with different languages. I have always been keen on
-      learning
-      new skills and exploring innovative ideas in every field.
-    </p>
-    <p>
-      My hobbies include playing Musical Instruments, and I enjoy spending time playing Instruments. I believe
-      in continuous growth and have always strived to achieve excellence in both my personal and professional life.
-    </p>
-    <p>
-      Feel free to explore this website to learn more about my journey, qualifications, skills, and achievements.
-    </p>
-    <img src="../img/harshit.jpg" alt="About Me" class="about-image">
-  </section>
+        <section class="expertise-section">
+            <h3 class="section-title">Academic Path & Skills</h3>
+            <div class="dual-layout">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="year">2024 — Present</span>
+                        <h4>B.Tech in CSE (AI)</h4>
+                        <p>Mandsaur University | 4th Semester</p>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="year">2022 — 2024</span>
+                        <h4>Higher Secondary (12th)</h4>
+                        <p>ST Thomas Sr Sec School | 69%</p>
+                    </div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-info"><span>Python & AI</span><span>85%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-info"><span>React & JS</span><span>75%</span></div>
+                        <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
+        <section class="milestones-section">
+            <h3 class="section-title">Honors & Milestones</h3>
+            <div class="achievements-compact">
+                <div class="ach-card">
+                    <span class="category">Music</span>
+                    <h4>7-Year Band Degree</h4>
+                    <p>Demonstrating long-term discipline and technical mastery.</p>
+                </div>
+                <div class="ach-card">
+                    <span class="category">Leadership</span>
+                    <h4>Green House Captain</h4>
+                    <p>Led student teams in competitive events.</p>
+                </div>
+            </div>
+        </section>
 
-  </footer>
+        <section class="personal-section">
+            <h3 class="section-title">Life Beyond Code</h3>
+            <div class="hobby-grid">
+                <div class="hobby-item">
+                    <img src="../img/tabla.jpg" alt="Music">
+                    <p><strong>Musical Instruments:</strong> I am the Tabla instrunment player which helps me with logic and rhythm.</p>
+                </div>
+                <div class="hobby-item">
+                    <img src="../img/travel.jpg" alt="Travel">
+                    <p><strong>Exploring:</strong> Traveling keeps my perspective fresh and creative.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Harshit Dakh. All Rights Reserved.</p>
+    </footer>
 </body>
-
 </html>

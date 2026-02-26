@@ -1,103 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Resume | Harshit Dakh</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/resume.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>My Resume</h1>
-        <header>
-            <nav>
-                <ul class="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./about.html">About Me</a></li>
-                    </li>
-                    <li>
-                        <a href="#">Gallery</a>
-                        <ul class="dropdown">
-                            <li><a href="./moment.html">Best Moment</a></li>
-                            <li><a href="./gallery.html">Photo Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li>
-                        <a href="#">More</a>
-                        <ul class="dropdown">
-                            <li><a href="./privacy.html">Privacy Policy</a></li>
-                            <li><a href="./faq.html">FAQ</a></li>
-                            <li><a href="./qualification.html">Qualification & Skills</a></li>
-                            <li><a href="./family.html">Family Details</a></li>
-                            <li><a href="./friends.html">Friends Details</a></li>
-                            <li><a href="./achievement.html">Achievements</a></li>
-                            <li><a href="./testimonials.html">Testimonials</a></li>
-                            <li><a href="./resume.html">My Resume</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./portfolio.html">My Portfolio</a></li>
-                            <li><a href="./hobbies.html">Hobbies</a></li>
-                            <li><a href="./github.html">GitHub</a></li>
-                            <li><a href="./privacy.html">Privacy Policy</a></li>
-                            <li><a href="./faq.html">FAQ</a></li>
-                            <li><a href="./resource.html">Resources Page</a></li>
-                            <li><a href="./projects.html">My Projects</a></li>
-                        </ul>
-                </ul>
-            </nav>
-        </header>
-
-
-    </header>
-    <div class="container">
-        <h1>Harshit Dakh</h1>
-        <p>Email: harshitdakh07829@gmail.com | Phone: 9424872364 | LinkedIn: <a
-                href="https://www.linkedin.com/in/harshit-dakh-b46a41306/">Harshit Dakh</a></p>
-        <section>
-            <h2>Education</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Degree</th>
-                        <th>Institution</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bachelor in Technology</td>
-                        <td>Mandsaur University</td>
-                        <td>pursuing-2028</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section>
-            <h2>Skills</h2>
-            <div class="skills">
-                <div class="skill">HTML</div>
-                <div class="skill">CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">Python</div>
-                <div class="skill">SQL</div>
-            </div>
-        </section>
-        <section>
-            <h2>Certifications</h2>
-            <ul>
-                <li>Green house caption Achieved during year 2023-2024</li>
-                <li>Received certificate of band from ANURAG SUJANIYA(SP Mandsaur) Achieved during year 2020-2021</li>
-                <li>Completed 7 years bachelor's degree in Band Achieved during year 2023-2024</li>
+  <nav class="navbar">
+    <div class="logo">HD<span>.</span></div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li> 
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        <li class="has-dropdown">
+            <a href="#">More ▾</a>
+            <ul class="dropdown">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
-        </section>
-    </div>
+        </li>
+    </ul>
+</nav>
+
+    <main class="resume-wrapper">
+        <div class="resume-card">
+            <header class="resume-header">
+                <h1>Harshit Dakh</h1>
+                <p class="contact-line">
+                    <a href="mailto:harshitdakh07829@gmail.com">harshitdakh07829@gmail.com</a> | 
+                    <span>+91 9424872364</span> | 
+                    <a href="https://www.linkedin.com/in/harshit-dakh-b46a41306/" target="_blank">LinkedIn</a>
+                </p>
+            </header>
+
+            <section class="resume-section">
+                <h3><span class="sec-icon">🎓</span> Education</h3>
+                <div class="edu-item">
+                    <div class="edu-main">
+                        <strong>Bachelor of Technology in CSE (AI)</strong>
+                        <span>2024 — 2028</span>
+                    </div>
+                    <p>Mandsaur University | Current Semester: 4th</p>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h3><span class="sec-icon">⚡</span> Technical Skills</h3>
+                <div class="skills-flex">
+                    <span class="skill-tag">Python (AI/ML)</span>
+                    <span class="skill-tag">JavaScript (React)</span>
+                    <span class="skill-tag">FastAPI</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">HTML5 & CSS3</span>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h3><span class="sec-icon">🛠️</span> Featured Project</h3>
+                <div class="project-item">
+                    <div class="edu-main">
+                        <strong>Modern Web Application </strong>
+                        <span>Jan 2026 — Present</span>
+                    </div>
+                    <p>	Developed a high-performance frontend application hosted on Vercel, focusing on modern UI/UX principles using <strong>Next.js</strong> and <strong>React</strong>.</p>
+                </div>
+            </section>
+
+            <section class="resume-section">
+                <h3><span class="sec-icon">🏆</span> Certifications & Honors</h3>
+                <ul class="cert-list">
+                    <li><strong>7-Year Bachelor's Degree in Band</strong> — Demonstrating long-term discipline and mastery.</li>
+                    <li><strong>SP Mandsaur Excellence Certificate</strong> — Received for band performance from Anurag Sujaniya.</li>
+                    <li><strong>Green House Captain (2023-24)</strong> — Proven leadership and team management.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
     <footer>
-        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
+        <p>&copy; 2026 Harshit Dakh. Professional Portfolio.</p>
     </footer>
-
 </body>
-
 </html>

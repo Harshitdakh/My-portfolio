@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            padding: 20px;
+        }
+
+        .contact-container {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .contact-container h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-container input,
+        .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .contact-container button {
+            padding: 10px;
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact-container button:hover {
+            background: #6a11cb;
+        }
+
+        .contact-container p {
+            margin-top: 15px;
+            font-size: 14px;
+            text-align: center;
+            color: #555;
+        }
+
+        .undo {
+            height: 50px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">
+        <img class="undo"
+            src="data:image/png;base64,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"
+            alt=""></a>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p>We will get back to you within 2-3 business days.</p>
+    </div>
+</body>
+
+</html>

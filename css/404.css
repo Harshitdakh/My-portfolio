@@ -1,81 +1,84 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Using the variables we defined in your main style.css */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #ff7eb3, #8f94fb);
-    color: #fff;
+    background: #0f172a; /* Deep tech blue/black */
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    overflow: hidden;
 }
 
 .error-container {
-    max-width: 600px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.03);
+    /* backdrop-filter: blur(15px); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 24px;
+    text-align: center;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.error-container h1 {
-    font-size: 6rem;
-    color: #ffdd57;
-    margin-bottom: 10px;
-    text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+h1 {
+    font-size: 8rem;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(to bottom, #6366f1, #a855f7);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    color: #f8fafc;
+    margin-bottom: 1rem; font-weight: 600;
 }
 
 .error-message {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    color: #94a3b8;
+    margin-bottom: 2rem;
 }
 
-.redirect-message {
-    font-size: 1rem;
-    margin-bottom: 15px;
+/* Progress Bar Styling */
+.status-box {
+    margin-bottom: 2.5rem;
+    color: #6366f1;
+    font-family: 'Courier New', monospace;
 }
 
-.redirect-message a {
-    color: #ffdd57;
-    text-decoration: underline;
-    font-weight: bold;
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 10px;
 }
 
-.redirect-message a:hover {
-    color: #ffd700;
+.progress-fill {
+    height: 100%;
+    background: #6366f1;
+    width: 100%;
+    animation: countdown-progress 5s linear forwards;
+}
+
+@keyframes countdown-progress {
+    from { width: 100%; }
+    to { width: 0%; }
 }
 
 .home-button {
-    text-decoration: none;
-    background: #4e54c8;
+    display: inline-block;
+    padding: 12px 32px;
+    background: #6366f1;
     color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1.2rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .home-button:hover {
-    background: #ff7eb3;
-    transform: scale(1.1);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background: #4f46e5;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
 }

@@ -1,89 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub / Code</title>
+    <title>Open Source | Harshit Dakh</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/github.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <h1>Github</h1>
-        <header>
-            <nav>
-                <ul class="menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./about.html">About Me</a></li>
-                    </li>
-                    <li>
-                        <a href="#">Gallery</a>
-                        <ul class="dropdown">
-                            <li><a href="./moment.html">Best Moment</a></li>
-                            <li><a href="./gallery.html">Photo Gallery</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li>
-                        <a href="#">More</a>
-                        <ul class="dropdown">
-                            <li><a href="./privacy.html">Privacy Policy</a></li>
-                            <li><a href="./faq.html">FAQ</a></li>
-                            <li><a href="./qualification.html">Qualification & Skills</a></li>
-                            <li><a href="./family.html">Family Details</a></li>
-                            <li><a href="./friends.html">Friends Details</a></li>
-                            <li><a href="./achievement.html">Achievements</a></li>
-                            <li><a href="./testimonials.html">Testimonials</a></li>
-                            <li><a href="./resume.html">My Resume</a></li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./portfolio.html">My Portfolio</a></li>
-                            <li><a href="./hobbies.html">Hobbies</a></li>
-                            <li><a href="./github.html">GitHub</a></li>
-                            <li><a href="./privacy.html">Privacy Policy</a></li>
-                            <li><a href="./faq.html">FAQ</a></li>
-                            <li><a href="./resource.html">Resources Page</a></li>
-                            <li><a href="./projects.html">My Projects</a></li>
-                        </ul>
+    <nav class="navbar">
+        <div class="logo">HD<span>.</span></div>
+        <ul class="menu">
+            <li><a href="../index.html">Home</a></li> 
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html" class="btn-contact">Contact</a></li>
+            <li class="has-dropdown">
+                <a href="#">More ▾</a>
+                <ul class="dropdown">
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="testimonials.html">Reviews</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
                 </ul>
-            </nav>
-        </header>
+            </li>
+        </ul>
+    </nav>
 
+    <main class="github-main">
+        <section class="github-hero">
+            <span class="badge">Open Source</span>
+            <h2>Code & <span class="highlight">Contributions</span></h2>
+            <p>Exploring the intersection of AI and Web Development through code.</p>
+            <a href="https://github.com/Harshitdakh" target="_blank" class="github-link-main">
+                <svg height="24" width="24" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+                @Harshitdakh
+            </a>
+        </section>
 
-    </header>
-
-    <section class="github-profile">
-        <h2>Visit My GitHub</h2>
-        <a href="https://github.com/Harshitdakh" target="_blank" class="github-link">
-            github.com/Harshit Dakh
-        </a>
-    </section>
-
-    <!-- <section class="projects">
-        <h2>Highlighted Projects</h2>
-        <div class="project-list">
-            <div class="project">
-                <h3>Project 1: Awesome App</h3>
-                <p>A modern web app built with React, showcasing responsive design and API integration.</p>
-                <a href="https://github.com/yourusername/project1" target="_blank" class="btn">View on GitHub</a>
+        <section class="repo-grid">
+            <div class="repo-card">
+                <div class="repo-header">
+                    <span class="folder-icon">📂</span>
+                    <span class="repo-name">MilkHub</span>
+                </div>
+                <p class="repo-desc">A dairy product website used by local vendors to manage their inventory and sales efficiently.</p>
+                <div class="repo-footer">
+                    <span class="lang"><i class="dot nodejs"></i> Nodejs</span>
+                    <span class="lang"><i class="dot react"></i> React</span>
+                </div>
             </div>
-            <div class="project">
-                <h3>Project 2: Data Visualizer</h3>
-                <p>A Python-based project that visualizes data beautifully using Matplotlib and Plotly.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank" class="btn">View on GitHub</a>
+
+            <div class="repo-card">
+                <div class="repo-header">
+                    <span class="folder-icon">📂</span>
+                    <span class="repo-name">Medify</span>
+                </div>
+                <p class="repo-desc">AI-powered medical prescription digitizer using FastAPI and React. Features OCR and automated verification.</p>
+                <div class="repo-footer">
+                    <span class="lang"><i class="dot python"></i> Python</span>
+                    <span class="lang"><i class="dot react"></i> React</span>
+                </div>
             </div>
-            <div class="project">
-                <h3>Project 3: Open Source Contribution</h3>
-                <p>Contributions to an open-source library improving performance and adding new features.</p>
-                <a href="https://github.com/yourusername/contribution" target="_blank" class="btn">View Contribution</a>
+
+            <div class="repo-card">
+                <div class="repo-header">
+                    <span class="folder-icon">📂</span>
+                    <span class="repo-name">AI-Insights</span>
+                </div>
+                <p class="repo-desc">A collection of Jupyter Notebooks exploring machine learning models and data visualization techniques.</p>
+                <div class="repo-footer">
+                    <span class="lang"><i class="dot jupyter"></i> Jupyter</span>
+                </div>
             </div>
-        </div>
-    </section> -->
+
+            <div class="repo-card">
+                <div class="repo-header">
+                    <span class="folder-icon">📂</span>
+                    <span class="repo-name">Modern-Portfolio</span>
+                </div>
+                <p class="repo-desc">The source code for this personal website, built with a focus on modern UI/UX and responsiveness.</p>
+                <div class="repo-footer">
+                    <span class="lang"><i class="dot html"></i> HTML/CSS</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
+        <p>&copy; 2026 Harshit Dakh. All Rights Reserved.</p>
     </footer>
 </body>
-
 </html>
