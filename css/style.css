@@ -1,171 +1,137 @@
-/* General Reset */
+:root {
+    --primary: #000000; /* Modern Indigo */
+    --dark: #000000;
+    --light: rgba(192, 218, 224, 0.8);
+    --accent: #ffdd57;
+    --glass: rgba(255, 255, 255, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Header */
-header {
-  background: #000000;
-  color: #ee8686;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Glassmorphism Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    background: var(--glass);
+    /* backdrop-filter: blur(10px); */
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 24px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links a {
-  color: #ffffff;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffa500;
-}
-
-/* Banner */
-.banner {
-  /* position: relative; */
-  /* z-index: -2; */
-  /* height: 100px; */
-  text-align: center;
-  margin: 20px 0;
-}
-
-.banner img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Introduction Section */
-.intro {
-  padding: 20px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.intro h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.intro p {
-  font-size: 20px;
-  color: #000000;
-}
-
-/* Footer */
-footer {
-  position: fixed;
-  width: 100vw;
-  height: 29px;
-  background: #333;
-  color: #fff;
-  text-align: center;
-  bottom: 0;
-  right: 0;
-  padding: 10px 20px;
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-links a {
-  color: #ffa500;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* General Navigation Styling */
-nav {
-  background: #4e54c8;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+.logo span { color: var(--primary); }
 
 .menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
 }
 
-.menu>li {
-  position: relative;
+.menu a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.menu>li>a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  display: block;
-  transition: background 0.3s, color 0.3s;
-}
+.menu a:hover { color: var(--primary); }
 
-.menu>li>a:hover {
-  background: #ffdd57;
-  color: #333;
-  border-radius: 5px;
-}
-
-/* Dropdown Styling */
+/* Modern Dropdown */
+.has-dropdown { position: relative; }
 .dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #8f94fb;
-  list-style: none;
-  padding: 10px 0;
-  display: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 10;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: none;
+    padding: 0.5rem 0;
+    list-style: none;
 }
 
-.dropdown li {
-  padding: 5px 20px;
-}
+.has-dropdown:hover .dropdown { display: block; }
 
 .dropdown li a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  display: block;
-  transition: background 0.3s, color 0.3s;
+    padding: 0.5rem 1.5rem;
+    display: block;
+    font-size: 0.9rem;
 }
 
-.dropdown li a:hover {
-  background: #ffdd57;
-  color: #333;
-  border-radius: 5px;
+/* Hero Section */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 4rem;
 }
 
-/* Display Dropdown on Hover */
-.menu li:hover .dropdown {
-  display: block;
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.highlight { color: var(--primary); }
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #000000;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn.primary { background: var(--primary); color: rgb(255, 252, 252); }
+.btn.secondary { border: 2px solid var(--primary); color: var(--primary); }
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Trendy organic shape */
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid #e2e8f0;
 }

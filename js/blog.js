@@ -1,35 +1,36 @@
+// blog.js
 const dessertImage = document.getElementById("dessertImage");
 const description = document.getElementById("description");
-dessertImage.addEventListener("click", () =>
-{
-    if (description.style.display === "block") {
-        description.scrollIntoView({ behavior: "smooth" });
-        return;
-    }
-    description.style.display = "block";
-    description.style.opacity = 0;
-    description.style.transition = "opacity 0.5s ease";
-    setTimeout(() =>
-    {
-        description.style.opacity = 1; // Fade in
-    }, 10);
-    description.scrollIntoView({ behavior: "smooth" });
-});
+const readMoreBtn = document.querySelector(".read-more-btn");
+
+// 1. Create and append the close button dynamically
 const closeButton = document.createElement("button");
-closeButton.textContent = "Hide Description";
-closeButton.style.marginTop = "10px";
-closeButton.style.padding = "8px 12px";
-closeButton.style.cursor = "pointer";
-closeButton.style.border = "1px solid #ccc";
-closeButton.style.backgroundColor = "#f5f5f5";
-closeButton.style.borderRadius = "4px";
+closeButton.innerHTML = "<span>×</span> Hide Recipe";
+closeButton.className = "close-recipe-btn"; 
 description.appendChild(closeButton);
 
-closeButton.addEventListener("click", () =>
-{
-    description.style.opacity = 0; // Fade out
-    setTimeout(() =>
-    {
-        description.style.display = "none";
-    }, 500);
+// 2. Optimized Toggle Function
+function toggleRecipe() {
+    const isVisible = description.classList.contains("show");
+
+    if (isVisible) {
+        description.classList.remove("show");
+        dessertImage.scrollIntoView({ behavior: "smooth", block: "center" });
+    } else {
+        description.classList.add("show");
+        // Delay scroll slightly to allow the element to render
+        setTimeout(() => {
+            description.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 100);
+    }
+}
+
+// 3. Event Listeners
+readMoreBtn.addEventListener("click", toggleRecipe);
+dessertImage.addEventListener("click", toggleRecipe);
+
+closeButton.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevents the image click from re-firing
+    description.classList.remove("show");
+    dessertImage.scrollIntoView({ behavior: "smooth", block: "center" });
 });

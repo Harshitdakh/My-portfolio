@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Error - Page Not Found</title>
-    <link rel="stylesheet" href="../css/404.css">
+    <title>404 - Neural Path Not Found</title>
     <link rel="stylesheet" href="../css/style.css">
-    <a href="../index.html"></a>
-
+    <link rel="stylesheet" href="../css/404.css">
 </head>
-
 <body>
+   <nav class="navbar">
+    <div class="logo">HD<span>.</span></div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li> 
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        <li class="has-dropdown">
+            <a href="#">More ▾</a>
+            <ul class="dropdown">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
     <div class="error-container">
-        <h1>404</h1>
-        <p class="error-message">Oops! The page you're looking for doesn't exist.</p>
-        <p class="redirect-message">Redirecting you to the <a href="index.html">home page</a> in <span
-                id="countdown">5</span> seconds...</p>
-        <a href="../index.html" class="home-button">Go to Home</a>
+        <div class="glitch-wrapper">
+            <h1 class="glitch" data-text="404">404</h1>
+        </div>
+        <h2>System Disconnected</h2>
+        <p class="error-message">The requested data packet does not exist in this sector.</p>
+        
+        <div class="status-box">
+            <p>Redirecting to Home Base in <span id="countdown">5</span>s</p>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+
+        <a href="../index.html" class="home-button">Manual Override (Home)</a>
     </div>
 
     <script src="../js/404.js"></script>
-    <footer>
-        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
-
-    </footer>
 </body>
-
 </html>

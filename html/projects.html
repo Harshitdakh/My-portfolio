@@ -1,81 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Overview</title>
+    <title>Projects | Harshit Dakh</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <h1>My Creativity</h1>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./about.html">About Me</a></li>
-                </li>
-                <li>
-                    <a href="#">Gallery</a>
-                    <ul class="dropdown">
-                        <li><a href="./moment.html">Best Moment</a></li>
-                        <li><a href="./gallery.html">Photo Gallery</a></li>
-                    </ul>
-                </li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li>
-                    <a href="#">More</a>
-                    <ul class="dropdown">
-                        <li><a href="./privacy.html">Privacy Policy</a></li>
-                        <li><a href="./faq.html">FAQ</a></li>
-                        <li><a href="./qualification.html">Qualification & Skills</a></li>
-                        <li><a href="./family.html">Family Details</a></li>
-                        <li><a href="./friends.html">Friends Details</a></li>
-                        <li><a href="./achievement.html">Achievements</a></li>
-                        <li><a href="./testimonials.html">Testimonials</a></li>
-                        <li><a href="./resume.html">My Resume</a></li>
-                        <li><a href="./blog.html">Blog</a></li>
-                        <li><a href="./portfolio.html">My Portfolio</a></li>
-                        <li><a href="./hobbies.html">Hobbies</a></li>
-                        <li><a href="./github.html">GitHub</a></li>
-                        <li><a href="./privacy.html">Privacy Policy</a></li>
-                        <li><a href="./faq.html">FAQ</a></li>
-                        <li><a href="./resource.html">Resources Page</a></li>
-                        <li><a href="./projects.html">My Projects</a></li>
-                    </ul>
+ <nav class="navbar">
+    <div class="logo">HD<span>.</span></div>
+    <ul class="menu">
+        <li><a href="../index.html">Home</a></li> 
+        
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="github.html">GitHub</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="btn-contact">Contact</a></li>
+        <li class="has-dropdown">
+            <a href="#">More ▾</a>
+            <ul class="dropdown">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="testimonials.html">Reviews</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
             </ul>
-        </nav>
-    </header>
+        </li>
+    </ul>
+</nav>
 
-    <main>
+    <main class="projects-wrapper">
+        <header class="section-header">
+            <span class="badge">Innovation</span>
+            <h2>My <span class="highlight">Creativity</span></h2>
+            <p>From AI-driven verification to high-performance web interfaces.</p>
+        </header>
+
+        <div class="filter-container">
+            <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+            <button class="filter-btn" onclick="filterProjects('ai')">AI & ML</button>
+            <button class="filter-btn" onclick="filterProjects('web')">Web Dev</button>
+        </div>
+
         <section id="projects-container">
-            <div class="project-card web" data-category="web">
-                <h3>shop Website</h3>
-                <p>A web development project using HTML, CSS, and JavaScript.</p>
-                <a href="../Projects/index.html">View Project</a>
-            </div>
 
-            <div class="project-card mobile" data-category="mobile">
-                <h3>News Page</h3>
-                <p>A news page where you can read the news also can watch the video.</p>
-                <a href="../Projects/WDASS2/index.html">View Project</a>
+             <div class="project-card web" data-category="web">
+                <div class="card-tag">Dairy product website</div>
+                <h3>MilkHub</h3>
+                <p>An integrated Dairy product website with responsive design and user-friendly interface.</p>
+                <div class="tech-tags">
+                    <span>Flutter</span>
+                    <span>react</span>
+                </div>
+                
+                 <a href="https://frontend-six-kappa-89.vercel.app/" class="btn">Live Site</a>
             </div>
 
             <div class="project-card ai" data-category="ai">
-                <h3>Bakery Shop</h3>
-                <p> A web development project using HTML, CSS, and JavaScript.</p>
-                <a href="../Projects/web project 5/html/index.html">View Project</a>
+                <div class="card-tag">Flagship AI</div>
+                <h3>Medify</h3>
+                <p>AI-powered prescription digitizer using FastAPI and React to automate medical verification.</p>
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>FastAPI</span>
+                    <span>OCR</span>
+                </div>
+                <div class="project-links">
+            <a href="https://github.com/Harshitdakh/Medify" class="btn">View Source Code</a>
+            <!-- <a href="#" class="btn btn-primary">Live Demo</a> -->
+        </div>
             </div>
+
+            <div class="project-card web" data-category="web">
+                <div class="card-tag">Client Work</div>
+                <h3>Bakery Shop</h3>
+                <p>A high-performance e-commerce landing page with dynamic UI components.</p>
+                <div class="tech-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JS</span>
+                </div>
+                <a href="../Projects/web project 5/html/index.html" class="view-btn">Live Site</a>
+            </div>
+
+            <div class="project-card web" data-category="web">
+                <div class="card-tag">Multimedia</div>
+                <h3>Insight News</h3>
+                <p>An integrated news portal featuring video streaming and real-time content delivery.</p>
+                <div class="tech-tags">
+                    <span>API</span>
+                    <span>Responsive</span>
+                </div>
+                <a href="../Projects/WDASS2/index.html" class="view-btn">View Portal</a>
+            </div>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 My Personal Website. All Rights Reserved.</p>
+        <p>&copy; 2026 Harshit Dakh. All Rights Reserved.</p>
     </footer>
 
     <script src="../js/projects.js"></script>
 </body>
-
 </html>
