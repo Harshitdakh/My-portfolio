@@ -59,9 +59,25 @@ h2 { font-size: 1.5rem; }
   body { font-size: 15px; }
   .row, .columns, .flex { display: block; gap: 12px; }
   .col, .column, .card, .project-card { width: 100%; min-width: 0; }
-  nav, header, .navbar, .menu { display: block; }
+  nav, header, .navbar {
+    display: block;
+    padding: 1rem 12px !important;
+  }
+  .menu {
+    display: block;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .menu a { display: inline-block; }
   .container, .wrapper, .main { padding-left: 12px; padding-right: 12px; }
-  .hero { padding: 20px 12px; }
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 12px;
+    height: auto;
+  }
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-image img { width: 100%; max-width: 300px; height: auto; margin-top: 1rem; }
 }
 
 /* Medium+ screens: keep flexible grid */
