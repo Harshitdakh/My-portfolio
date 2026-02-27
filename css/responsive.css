@@ -1,0 +1,81 @@
+/* Responsive helpers added to make pages work well on phones and laptops
+   - Keeps existing styles but provides fluid layouts, image scaling,
+     flexible containers and common media queries. */
+
+/* Global box-sizing and container */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: inherit;
+}
+
+/* Make media elements scale */
+img, picture, video, canvas, svg, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* A commonly used responsive wrapper */
+.container, .wrapper, .site-container, .main {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* Utility columns fallback */
+.row, .columns, .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.col, .column, .card, .project-card {
+  flex: 1 1 0;
+  min-width: 220px;
+}
+
+/* Touch targets and links */
+button, .btn, a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+}
+
+/* Typography scaling guidance */
+body { font-size: 16px; line-height: 1.45; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+
+/* Small screens: stack layout and increase readability */
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+  .row, .columns, .flex { display: block; gap: 12px; }
+  .col, .column, .card, .project-card { width: 100%; min-width: 0; }
+  nav, header, .navbar, .menu { display: block; }
+  .container, .wrapper, .main { padding-left: 12px; padding-right: 12px; }
+  .hero { padding: 20px 12px; }
+}
+
+/* Medium+ screens: keep flexible grid */
+@media (min-width: 601px) and (max-width: 1024px) {
+  body { font-size: 15.5px; }
+  .col, .column { flex: 1 1 45%; }
+}
+
+@media (min-width: 1025px) {
+  body { font-size: 16px; }
+  .col, .column { flex: 1 1 30%; }
+}
+
+/* Fallback for long text blocks */
+p { word-break: break-word; }
+
+/* End of responsive helpers */
