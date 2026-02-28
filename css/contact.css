@@ -96,8 +96,121 @@
     box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.3);
 }
 
+/* TABLET ADJUSTMENTS (1024px and below) */
+@media (max-width: 1024px) {
+    .contact-wrapper {
+        padding: 40px 15px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+    }
+    
+    .contact-info {
+        padding: 40px;
+    }
+    
+    .contact-form-section {
+        padding: 40px;
+    }
+}
+
+/* MOBILE ADJUSTMENTS (768px and below) */
 @media (max-width: 768px) {
-    .contact-container { grid-template-columns: 1fr; }
-    .contact-info { padding: 40px; }
-    .contact-form-section { padding: 40px; }
+    .contact-wrapper {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        border-radius: 16px;
+        overflow: visible;
+    }
+    
+    .contact-info {
+        background: #0f172a;
+        color: white;
+        padding: 30px;
+        border-radius: 16px 16px 0 0;
+        margin-bottom: 0;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .info-details {
+        margin-top: 25px;
+    }
+    
+    .info-item {
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-form-section {
+        padding: 30px;
+        background: white;
+        border-radius: 0 0 16px 16px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 0;
+        font-size: 1rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
+
+/* SMALL MOBILE ADJUSTMENTS (480px and below) */
+@media (max-width: 480px) {
+    .contact-wrapper {
+        padding: 20px 10px;
+    }
+    
+    .contact-info {
+        padding: 20px;
+    }
+    
+    .contact-form-section {
+        padding: 20px;
+    }
+    
+    .contact-info h2 {
+        font-size: 1.5rem;
+    }
+    
+    .info-item {
+        font-size: 0.85rem;
+    }
+    
+    .info-item strong {
+        font-size: 0.7rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 8px 0;
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
 }

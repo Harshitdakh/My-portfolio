@@ -82,3 +82,87 @@ h2 {
     transform: translateY(-2px);
     box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
 }
+
+/* MOBILE ADJUSTMENTS (768px and below) */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 0;
+    }
+    
+    .error-container {
+        width: 95%;
+        padding: 2rem;
+        margin: 20px auto;
+    }
+    
+    h1 {
+        font-size: 5rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .error-message {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .status-box {
+        font-size: 0.9rem;
+    }
+    
+    .progress-bar {
+        height: 3px;
+        margin-top: 8px;
+    }
+    
+    .home-button {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+/* SMALL MOBILE ADJUSTMENTS (480px and below) */
+@media (max-width: 480px) {
+    body {
+        padding: 15px 0;
+    }
+    
+    .error-container {
+        width: 96%;
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    .error-message {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.4;
+    }
+    
+    .status-box {
+        font-size: 0.8rem;
+    }
+    
+    .progress-bar {
+        margin-top: 6px;
+    }
+    
+    .home-button {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+        display: block;
+        width: 100%;
+    }
+}

@@ -1,8 +1,7 @@
-/* Responsive helpers added to make pages work well on phones and laptops
-   - Keeps existing styles but provides fluid layouts, image scaling,
-     flexible containers and common media queries. */
+/* COMPREHENSIVE RESPONSIVE STYLESHEET
+   Provides consistent mobile-first responsive design across all pages */
 
-/* Global box-sizing and container */
+/* ========== GLOBAL RESET & BOX SIZING ========== */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -13,17 +12,19 @@ html, body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-family: inherit;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* Make media elements scale */
+/* ========== RESPONSIVE MEDIA ELEMENTS ========== */
 img, picture, video, canvas, svg, iframe {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* A commonly used responsive wrapper */
-.container, .wrapper, .site-container, .main {
+/* ========== RESPONSIVE CONTAINERS ========== */
+.container, .wrapper, .site-container, .main, .content {
   width: 100%;
   max-width: 1200px;
   margin-left: auto;
@@ -32,98 +33,254 @@ img, picture, video, canvas, svg, iframe {
   padding-right: 16px;
 }
 
-/* Utility columns fallback */
-.row, .columns, .flex {
+/* ========== FLEX UTILITIES ========== */
+.row, .columns, .flex, .flex-row {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
+
 .col, .column, .card, .project-card {
   flex: 1 1 0;
   min-width: 220px;
 }
 
-/* Touch targets and links */
+/* ========== TOUCH & INTERACTION ========== */
 button, .btn, a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   touch-action: manipulation;
 }
 
-/* Typography scaling guidance */
-body { font-size: 16px; line-height: 1.45; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-
-/* Small screens: stack layout and increase readability */
-@media (max-width: 600px) {
-  body { font-size: 15px; }
-  .row, .columns, .flex { display: block; gap: 12px; }
-  .col, .column, .card, .project-card { width: 100%; min-width: 0; }
-  nav, header, .navbar {
-    display: block;
-    padding: 1rem 12px !important;
-  }
-  .nav-toggle-label { display: block; }
-  .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
-    background: var(--glass);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  .nav-toggle:checked ~ .menu { max-height: 500px; }
-  .menu a { display: inline-block; }
-  .container, .wrapper, .main { padding-left: 12px; padding-right: 12px; }
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 12px;
-    height: auto;
-  }
-  .hero-content h1 { font-size: 2.5rem; }
-  .hero-image img { width: 100%; max-width: 300px; height: auto; margin-top: 1rem; }
+button, .btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 8px 16px;
 }
 
-/* hamburger toggle styles */
-.nav-toggle { display: none; }
+/* ========== BASE TYPOGRAPHY ========== */
+body { 
+  font-size: 16px; 
+  line-height: 1.6;
+}
+
+h1 { font-size: 2rem; line-height: 1.2; }
+h2 { font-size: 1.5rem; line-height: 1.3; }
+h3 { font-size: 1.25rem; line-height: 1.4; }
+h4, h5, h6 { font-size: 1rem; }
+
+p { line-height: 1.6; word-break: break-word; }
+
+/* ========== HAMBURGER MENU STYLES ========== */
+.nav-toggle { 
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .nav-toggle-label {
   display: none;
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  z-index: 1001;
 }
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
+
+.nav-toggle-label span {
   display: block;
   width: 25px;
   height: 3px;
-  background: var(--dark);
+  background: currentColor;
+  border-radius: 2px;
+  transition: all 0.3s ease;
   position: relative;
-  transition: 0.3s;
 }
+
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   content: '';
   position: absolute;
+  width: 25px;
+  height: 3px;
+  background: inherit;
+  border-radius: inherit;
+  transition: inherit;
 }
-.nav-toggle-label span::before { top: -8px; }
-.nav-toggle-label span::after { top: 8px; }
 
-/* Medium+ screens: keep flexible grid */
-@media (min-width: 601px) and (max-width: 1024px) {
+.nav-toggle-label span::before { 
+  top: -8px; 
+}
+
+.nav-toggle-label span::after { 
+  top: 8px; 
+}
+
+/* Hamburger animation */
+.nav-toggle:checked ~ .nav-toggle-label span {
+  background: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========== TABLET SCREENS (769px - 1024px) ========== */
+@media (max-width: 1024px) {
   body { font-size: 15.5px; }
   .col, .column { flex: 1 1 45%; }
+  .container, .wrapper { padding-left: 20px; padding-right: 20px; }
 }
 
-@media (min-width: 1025px) {
-  body { font-size: 16px; }
-  .col, .column { flex: 1 1 30%; }
+/* ========== MOBILE SCREENS (481px - 768px) ========== */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  
+  .row, .columns, .flex { 
+    display: block; 
+    gap: 12px; 
+  }
+  
+  .col, .column, .card, .project-card { 
+    width: 100%; 
+    min-width: 0; 
+  }
+  
+  .container, .wrapper, .main { 
+    padding-left: 15px; 
+    padding-right: 15px; 
+  }
+  
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+  
+  /* Navbar adjustments */
+  nav, .navbar {
+    padding: 0.8rem 1rem !important;
+    flex-wrap: wrap;
+  }
+  
+  .nav-toggle-label { 
+    display: flex !important; 
+  }
+  
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    background: var(--glass);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0;
+    list-style: none;
+    z-index: 1000;
+  }
+  
+  .nav-toggle:checked ~ .menu { 
+    max-height: 500px;
+    padding: 1rem;
+  }
+  
+  .menu li { width: 100%; }
+  
+  .menu a { 
+    display: block; 
+    padding: 0.7rem;
+    border-radius: 6px;
+    transition: 0.2s;
+  }
+  
+  .menu a:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dropdown {
+    position: static !important;
+    display: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  
+  .has-dropdown:hover .dropdown {
+    display: none !important;
+  }
 }
 
-/* Fallback for long text blocks */
-p { word-break: break-word; }
+/* ========== SMALL MOBILE SCREENS (max 480px) ========== */
+@media (max-width: 480px) {
+  body { font-size: 14px; }
+  
+  .container, .wrapper, .main { 
+    padding-left: 12px; 
+    padding-right: 12px; 
+  }
+  
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.1rem; }
+  h3 { font-size: 1rem; }
+  
+  .nav-toggle-label {
+    padding: 0.4rem;
+  }
+  
+  .nav-toggle-label span {
+    width: 22px;
+    height: 2.5px;
+  }
+  
+  .nav-toggle-label span::before {
+    top: -7px;
+  }
+  
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+  
+  .menu {
+    max-height: 400px !important;
+  }
+  
+  button, .btn {
+    min-height: 40px;
+    padding: 6px 12px;
+  }
+}
 
-/* End of responsive helpers */
+/* ========== LANDSCAPE MOBILE (high width, low height) ========== */
+@media (max-height: 500px) and (min-width: 481px) {
+  nav, .navbar {
+    padding: 0.5rem 1rem !important;
+  }
+  
+  h1 { font-size: 1.5rem; }
+  
+  .menu {
+    gap: 0.3rem;
+  }
+}
+
+/* ========== HIGH DPI / RETINA DISPLAYS ========== */
+@media (min-resolution: 2dppx) {
+  img, picture, svg {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+  body { background: white; }
+  nav, .nav-toggle-label { display: none; }
+  .container { max-width: none; }
+}

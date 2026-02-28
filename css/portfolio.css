@@ -107,6 +107,144 @@
     background: #4f46e5;
 }
 
+/* TABLET ADJUSTMENTS (1024px and below) */
+@media (max-width: 1024px) {
+    .portfolio-wrapper {
+        padding: 60px 5%;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* MOBILE ADJUSTMENTS (768px and below) */
 @media (max-width: 768px) {
-    .projects-grid { grid-template-columns: 1fr; }
+    .portfolio-wrapper {
+        padding: 40px 3%;
+        min-height: auto;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        border-radius: 16px;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+    
+    .tech-stack {
+        bottom: 10px;
+        left: 10px;
+        gap: 6px;
+    }
+    
+    .tech-stack span {
+        padding: 3px 10px;
+        font-size: 0.7rem;
+    }
+    
+    .project-info {
+        padding: 20px;
+    }
+    
+    .project-info h3 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+    
+    .project-info p {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+    
+    .project-links {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .link-btn {
+        padding: 7px 15px;
+        font-size: 0.8rem;
+        flex: 1;
+        min-width: 80px;
+    }
+}
+
+/* SMALL MOBILE ADJUSTMENTS (480px and below) */
+@media (max-width: 480px) {
+    .portfolio-wrapper {
+        padding: 30px 2%;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .section-header p {
+        font-size: 0.85rem;
+    }
+    
+    .project-card {
+        border-radius: 12px;
+    }
+    
+    .project-image {
+        height: 150px;
+    }
+    
+    .tech-stack {
+        bottom: 8px;
+        left: 8px;
+    }
+    
+    .tech-stack span {
+        padding: 2px 8px;
+        font-size: 0.65rem;
+    }
+    
+    .project-info {
+        padding: 15px;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-info p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    
+    .link-btn {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+    }
 }

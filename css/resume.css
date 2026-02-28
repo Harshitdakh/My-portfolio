@@ -107,7 +107,153 @@
     left: 0;
 }
 
+/* TABLET ADJUSTMENTS (1024px and below) */
+@media (max-width: 1024px) {
+    .resume-wrapper {
+        padding: 40px 15px;
+    }
+    
+    .resume-card {
+        max-width: 800px;
+        padding: 40px;
+    }
+    
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+    
+    .resume-section h3 {
+        font-size: 1.15rem;
+    }
+}
+
+/* MOBILE ADJUSTMENTS (768px and below) */
 @media (max-width: 768px) {
-    .resume-card { padding: 30px; }
-    .edu-main { flex-direction: column; }
+    .resume-wrapper {
+        padding: 30px 15px;
+    }
+    
+    .resume-card {
+        max-width: 100%;
+        padding: 30px;
+        border-radius: 8px;
+    }
+    
+    .resume-header {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .resume-header h1 {
+        font-size: 1.75rem;
+        margin-bottom: 8px;
+    }
+    
+    .contact-line {
+        font-size: 0.9rem;
+    }
+    
+    .resume-section {
+        margin-bottom: 25px;
+    }
+    
+    .resume-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+    
+    .edu-main {
+        flex-direction: column;
+        margin-bottom: 3px;
+    }
+    
+    .edu-main strong {
+        font-size: 1rem;
+        margin-bottom: 3px;
+    }
+    
+    .edu-main span {
+        font-size: 0.85rem;
+    }
+    
+    .edu-item p,
+    .project-item p {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+    
+    .skills-flex {
+        gap: 8px;
+    }
+    
+    .skill-tag {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .cert-list li {
+        margin-bottom: 10px;
+        padding-left: 18px;
+        font-size: 0.95rem;
+    }
+}
+
+/* SMALL MOBILE ADJUSTMENTS (480px and below) */
+@media (max-width: 480px) {
+    .resume-wrapper {
+        padding: 20px 10px;
+    }
+    
+    .resume-card {
+        padding: 20px;
+    }
+    
+    .resume-header {
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .resume-header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .contact-line {
+        font-size: 0.8rem;
+    }
+    
+    .resume-section {
+        margin-bottom: 15px;
+    }
+    
+    .resume-section h3 {
+        font-size: 1rem;
+    }
+    
+    .sec-icon {
+        font-size: 0.95rem;
+    }
+    
+    .edu-main strong {
+        font-size: 0.95rem;
+    }
+    
+    .edu-main span {
+        font-size: 0.8rem;
+    }
+    
+    .edu-item p,
+    .project-item p {
+        font-size: 0.9rem;
+    }
+    
+    .skill-tag {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .cert-list li {
+        font-size: 0.9rem;
+        padding-left: 15px;
+    }
 }
