@@ -5,26 +5,26 @@
 
 .blog-hero {
     background: rgba(192, 218, 224, 0.8);
-    padding: 100px 20px;
+    padding: clamp(3rem, 8vw, 6.25rem) clamp(1rem, 4vw, 2rem);
     text-align: center;
     border-bottom: 1px solid #e2e8f0;
 }
 
 .blog-hero h1 {
-    font-size: 3.5rem;
-    margin: 20px 0;
+    font-size: clamp(1.75rem, 7vw, 3.5rem);
+    margin: clamp(1rem, 2vw, 1.5rem) 0;
     color: #000000;
 }
 
 .blog-container {
     max-width: 900px;
-    margin: -60px auto 100px;
-    padding: 0 20px;
+    margin: clamp(-2rem, -5vw, -3.75rem) auto clamp(3.75rem, 10vw, 6.25rem);
+    padding: 0 clamp(0.8rem, 4vw, 2rem);
 }
 
 .blog-card {
     background: white;
-    border-radius: 24px;
+    border-radius: clamp(1rem, 3vw, 1.5rem);
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -32,7 +32,7 @@
 
 .card-image-wrapper {
     position: relative;
-    height: 400px;
+    height: clamp(150px, 60vw, 400px);
     overflow: hidden;
     cursor: pointer;
 }
@@ -50,36 +50,38 @@
 
 .category-tag {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: clamp(1rem, 3vw, 1.5rem);
+    left: clamp(1rem, 3vw, 1.5rem);
     background: var(--primary);
     color: white;
-    padding: 6px 16px;
+    padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1rem);
     border-radius: 50px;
-    font-size: 0.8rem;
+    font-size: clamp(0.65rem, 1.5vw, 0.8rem);
     font-weight: 600;
     z-index: 2;
 }
 
 .blog-card-content {
-    padding: 40px;
+    padding: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .blog-card-content h3 {
-    font-size: 2rem;
+    font-size: clamp(1.1rem, 3vw, 2rem);
     color: #1e293b;
-    margin-bottom: 1rem;
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
 }
 
 .read-more-btn {
     background: none;
     border: 2px solid var(--primary);
     color: var(--primary);
-    padding: 10px 25px;
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.6rem);
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
+    min-height: 40px;
+    min-width: 40px;
 }
 
 .read-more-btn:hover {
@@ -89,8 +91,8 @@
 
 /* Updated recipe display logic */
 .recipe-details {
-    margin-top: 30px;
-    padding-top: 30px;
+    margin-top: clamp(1.5rem, 4vw, 2rem);
+    padding-top: clamp(1.5rem, 4vw, 2rem);
     border-top: 1px solid #f1f5f9;
     display: none; /* Hidden by default */
     opacity: 0;
@@ -105,14 +107,15 @@
 .recipe-details ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin-bottom: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .recipe-details li {
-    margin-bottom: 12px;
-    padding-left: 25px;
+    margin-bottom: clamp(0.8rem, 2vw, 1rem);
+    padding-left: clamp(1.5rem, 4vw, 2rem);
     position: relative;
     line-height: 1.6;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
 }
 
 .recipe-details li::before {
@@ -125,15 +128,16 @@
 
 /* Close Button Styling */
 .close-recipe-btn {
-    margin-top: 20px;
+    margin-top: clamp(1rem, 2vw, 1.5rem);
     background: #f1f5f9;
     border: none;
     color: #64748b;
-    padding: 8px 16px;
+    padding: clamp(0.5rem, 1vw, 0.6rem) clamp(1rem, 2vw, 1.2rem);
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
     transition: 0.3s;
+    min-height: 40px;
 }
 
 .close-recipe-btn:hover {
@@ -141,136 +145,191 @@
     color: #0f172a;
 }
 
-/* TABLET ADJUSTMENTS (1024px and below) */
+/* TABLET ADJUSTMENTS (769px - 1024px) */
 @media (max-width: 1024px) {
     .blog-hero {
-        padding: 60px 30px;
+        padding: clamp(2rem, 6vw, 3.75rem) clamp(1.5rem, 4vw, 2rem);
     }
     
     .blog-hero h1 {
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
     }
     
     .blog-container {
         max-width: 800px;
-        margin: -40px auto 80px;
-        padding: 0 20px;
+        margin: clamp(-1.5rem, -4vw, -2.5rem) auto clamp(3rem, 8vw, 5rem);
+        padding: 0 clamp(1rem, 3vw, 1.5rem);
     }
     
     .card-image-wrapper {
-        height: 300px;
+        height: clamp(150px, 50vw, 300px);
     }
     
     .blog-card-content {
-        padding: 30px;
+        padding: clamp(1.5rem, 3vw, 2rem);
     }
     
     .blog-card-content h3 {
-        font-size: 1.6rem;
+        font-size: clamp(1rem, 2.5vw, 1.6rem);
     }
 }
 
-/* MOBILE ADJUSTMENTS (768px and below) */
+/* MOBILE ADJUSTMENTS (481px - 768px) */
 @media (max-width: 768px) {
     .blog-hero {
         background: rgba(192, 218, 224, 0.8);
-        padding: 60px 20px;
+        padding: clamp(1.5rem, 5vw, 2rem) clamp(1rem, 3vw, 1.5rem);
         text-align: center;
         border-bottom: 1px solid #e2e8f0;
     }
     
     .blog-hero h1 {
-        font-size: 2rem;
-        margin: 15px 0;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+        margin: clamp(0.8rem, 2vw, 1rem) 0;
     }
     
     .blog-container {
         max-width: 100%;
-        margin: -30px auto 60px;
-        padding: 0 15px;
+        margin: clamp(-1rem, -2vw, -1.5rem) auto clamp(2rem, 5vw, 3rem);
+        padding: 0 clamp(0.8rem, 2vw, 1rem);
     }
     
     .blog-card {
-        border-radius: 16px;
+        border-radius: clamp(1rem, 2.5vw, 1.3rem);
     }
     
     .card-image-wrapper {
-        height: 250px;
+        height: clamp(120px, 40vw, 250px);
     }
     
     .category-tag {
-        padding: 5px 12px;
-        font-size: 0.7rem;
-        top: 15px;
-        left: 15px;
+        padding: clamp(0.3rem, 0.8vw, 0.4rem) clamp(0.6rem, 1.5vw, 0.8rem);
+        font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+        top: clamp(0.8rem, 2vw, 1rem);
+        left: clamp(0.8rem, 2vw, 1rem);
     }
     
     .blog-card-content {
-        padding: 20px;
+        padding: clamp(1rem, 3vw, 1.5rem);
     }
     
     .blog-card-content h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.8rem;
+        font-size: clamp(0.95rem, 2vw, 1.3rem);
+        margin-bottom: clamp(0.6rem, 1.5vw, 0.8rem);
     }
     
     .blog-card-content p {
-        font-size: 0.9rem;
+        font-size: clamp(0.85rem, 1.5vw, 0.9rem);
     }
     
     .read-more-btn {
-        padding: 8px 20px;
-        font-size: 0.9rem;
+        padding: clamp(0.5rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1.2rem);
+        font-size: clamp(0.8rem, 1.5vw, 0.9rem);
     }
     
     .recipe-details {
-        margin-top: 20px;
-        padding-top: 20px;
+        margin-top: clamp(1rem, 2vw, 1.5rem);
+        padding-top: clamp(1rem, 2vw, 1.5rem);
     }
     
     .recipe-details li {
-        font-size: 0.9rem;
+        font-size: clamp(0.8rem, 1.2vw, 0.9rem);
     }
     
     .close-recipe-btn {
-        padding: 7px 14px;
-        font-size: 0.85rem;
+        padding: clamp(0.5rem, 0.8vw, 0.6rem) clamp(0.8rem, 1.5vw, 1rem);
+        font-size: clamp(0.8rem, 1.2vw, 0.85rem);
     }
 }
 
-/* SMALL MOBILE ADJUSTMENTS (480px and below) */
+/* SMALL MOBILE ADJUSTMENTS (376px - 480px) */
 @media (max-width: 480px) {
     .blog-hero {
-        padding: 40px 15px;
+        padding: clamp(1.2rem, 4vw, 1.5rem) clamp(0.8rem, 2vw, 1rem);
     }
     
     .blog-hero h1 {
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
     }
     
     .blog-container {
-        margin: -20px auto 40px;
-        padding: 0 10px;
+        margin: clamp(-0.8rem, -1.5vw, -1rem) auto clamp(1.5rem, 3vw, 2rem);
+        padding: 0 clamp(0.6rem, 1.5vw, 0.8rem);
     }
     
     .card-image-wrapper {
-        height: 200px;
+        height: clamp(100px, 35vw, 200px);
     }
     
     .blog-card-content {
-        padding: 15px;
+        padding: clamp(0.8rem, 2vw, 1.2rem);
     }
     
     .blog-card-content h3 {
-        font-size: 1.1rem;
+        font-size: clamp(0.85rem, 1.5vw, 1.1rem);
     }
     
     .blog-card-content p {
-        font-size: 0.85rem;
+        font-size: clamp(0.8rem, 1.2vw, 0.85rem);
     }
     
     .read-more-btn {
-        padding: 6px 15px;
+        padding: clamp(0.4rem, 0.8vw, 0.5rem) clamp(0.6rem, 1.2vw, 1rem);
+        font-size: clamp(0.75rem, 1.2vw, 0.8rem);
+    }
+}
+
+/* EXTRA SMALL MOBILE (320px - 375px) */
+@media (max-width: 375px) {
+    .blog-hero {
+        padding: 1rem 0.8rem;
+    }
+    
+    .blog-hero h1 {
+        font-size: 1.2rem;
+        margin: 0.6rem 0;
+    }
+    
+    .blog-container {
+        margin: -0.6rem auto 1.2rem;
+        padding: 0 0.6rem;
+    }
+    
+    .card-image-wrapper {
+        height: 120px;
+    }
+    
+    .blog-card {
+        border-radius: 12px;
+    }
+    
+    .category-tag {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.6rem;
+        top: 0.6rem;
+        left: 0.6rem;
+    }
+    
+    .blog-card-content {
+        padding: 0.8rem;
+    }
+    
+    .blog-card-content h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .blog-card-content p {
         font-size: 0.8rem;
+    }
+    
+    .read-more-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+    }
+    
+    .close-recipe-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
     }
 }
