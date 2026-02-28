@@ -6,19 +6,16 @@ a{
     color: white;
     justify-content: center;
     display: flex;
-    font-size: 200%;
+    font-size: clamp(1.2rem, 3vw, 2rem);
     text-decoration: underline;
-    margin-top: 50px;
-
+    margin-top: clamp(2rem, 5vw, 3.2rem);
     text-decoration: none;
     color: #e1e1e1;
     text-shadow: 2px 2px 5px #acb32a4c;
     filter: drop-shadow(0 0 100px #c9c73b);  
-
 }
 
 a:hover{
-
     transform: scale(0.95);
     color: #cfc59e;
     text-shadow: 2px 2px 5px #acb32a4c;
@@ -29,75 +26,70 @@ body{
     background-image: url(bg.jpg);
     background-size: cover;
     background-position: center;
-
 }
 
 .content{
   display: flex;
   justify-content: end;
   align-items: end;
-  
-    width: 60%;
-    gap: 40px;
-
-   margin: auto;
-   margin-right: 0;
-   margin-top: 50px;
+  width: clamp(50%, 60vw, 60%);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin: auto;
+  margin-right: 0;
+  margin-top: clamp(2rem, 5vw, 3.2rem);
 }
 
 header{
     position: fixed;
     display: flex;
     justify-content: start;
-    margin-left: 50px;
-   top:30% ;
-   font-size: 50px;
+    margin-left: clamp(1rem, 3vw, 3.2rem);
+   top: 30%;
+   font-size: clamp(2rem, 5vw, 3.2rem);
    color: #866c03;
    text-shadow: 2px 2px 5px #acb32a4c;
    filter: drop-shadow(0 0 77px #c9c73b);  
 }
+
 header:hover{
     color: #cfc59e;
     text-shadow: 2px 2px 5px #acb32a4c;
     filter: drop-shadow(0 0 77px #e5e4ba);  
-  
 }
+
 .card{
     border: 2px solid white;
-    border-radius: 33px;
-
-    /* From https://css.glass */
-background: rgba(227, 194, 51, 0.23);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(7.5px);
--webkit-backdrop-filter: blur(7.5px);
-border: 1px solid rgba(227, 194, 51, 0.3);
-padding: 10px 20px;
-box-shadow:rgba(217, 255, 1, 0.25) -1px 1px 55px, rgba(255, 255, 0, 0.12) 0px -12px 30px, rgba(208, 255, 0, 0.12) 0px 4px 6px, rgba(251, 255, 0, 0.17) 0px 12px 13px, rgba(251, 255, 0, 0.09) 0px -3px 5px;
-
+    border-radius: clamp(1rem, 2.5vw, 2.2rem);
+    background: rgba(227, 194, 51, 0.23);
+    border-radius: clamp(1rem, 2vw, 1.2rem);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(227, 194, 51, 0.3);
+    padding: clamp(0.6rem, 1.5vw, 1.3rem) clamp(1rem, 2vw, 1.6rem);
+    box-shadow: rgba(217, 255, 1, 0.25) -1px 1px 55px, rgba(255, 255, 0, 0.12) 0px -12px 30px, rgba(208, 255, 0, 0.12) 0px 4px 6px, rgba(251, 255, 0, 0.17) 0px 12px 13px, rgba(251, 255, 0, 0.09) 0px -3px 5px;
 }
 
-/* TABLET ADJUSTMENTS (1024px and below) */
+/* TABLET ADJUSTMENTS (769px - 1024px) */
 @media (max-width: 1024px) {
     header {
-        font-size: 40px;
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
         top: 25%;
-        margin-left: 30px;
+        margin-left: clamp(1rem, 2.5vw, 2rem);
     }
     
     .content {
         width: 80%;
-        gap: 30px;
-        margin-top: 40px;
+        gap: clamp(1.5rem, 2.5vw, 2rem);
+        margin-top: clamp(1.5rem, 3vw, 2.5rem);
     }
     
     a {
-        font-size: 150%;
+        font-size: clamp(1rem, 2vw, 1.5rem);
     }
 }
 
-/* MOBILE ADJUSTMENTS (768px and below) */
+/* MOBILE ADJUSTMENTS (481px - 768px) */
 @media (max-width: 768px) {
     body {
         background-attachment: fixed;
@@ -106,9 +98,9 @@ box-shadow:rgba(217, 255, 1, 0.25) -1px 1px 55px, rgba(255, 255, 0, 0.12) 0px -1
     header {
         position: static;
         display: block;
-        font-size: 28px;
-        margin-left: 20px;
-        margin-bottom: 30px;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        margin-left: clamp(1rem, 2vw, 1.5rem);
+        margin-bottom: clamp(1.5rem, 3vw, 2rem);
         text-align: center;
     }
     
@@ -116,49 +108,80 @@ box-shadow:rgba(217, 255, 1, 0.25) -1px 1px 55px, rgba(255, 255, 0, 0.12) 0px -1
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 20px;
-        margin: 20px 0;
+        gap: clamp(1rem, 2vw, 1.5rem);
+        margin: clamp(1rem, 2vw, 1.5rem) 0;
         margin-right: 0;
-        margin-top: 20px;
+        margin-top: clamp(1rem, 2vw, 1.5rem);
     }
     
     a {
-        font-size: 120%;
-        margin-top: 30px;
+        font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+        margin-top: clamp(1.5rem, 3vw, 2rem);
     }
     
     .card {
-        padding: 8px 15px;
-        border-radius: 20px;
+        padding: clamp(0.5rem, 1.2vw, 1rem) clamp(0.8rem, 1.5vw, 1.2rem);
+        border-radius: clamp(1rem, 1.5vw, 1.3rem);
     }
 }
 
-/* SMALL MOBILE ADJUSTMENTS (480px and below) */
+/* SMALL MOBILE ADJUSTMENTS (376px - 480px) */
 @media (max-width: 480px) {
     body {
-        padding: 10px;
+        padding: 0.6rem;
     }
     
     header {
-        font-size: 22px;
-        margin-left: 10px;
-        margin-bottom: 20px;
+        font-size: 1.4rem;
+        margin-left: 0.8rem;
+        margin-bottom: 1.5rem;
     }
     
     .content {
         width: 100%;
-        gap: 15px;
-        margin-top: 15px;
+        gap: 1rem;
+        margin-top: 1rem;
     }
     
     a {
-        font-size: 100%;
-        margin-top: 20px;
-        padding: 10px;
+        font-size: 1rem;
+        margin-top: 1.2rem;
+        padding: 0.8rem;
     }
     
     .card {
-        padding: 6px 10px;
-        border-radius: 16px;
+        padding: 0.5rem 0.8rem;
+        border-radius: 1rem;
+    }
+}
+
+/* EXTRA SMALL MOBILE (320px - 375px) */
+@media (max-width: 375px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    header {
+        font-size: 1.2rem;
+        margin-left: 0.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .content {
+        width: 100%;
+        gap: 0.8rem;
+        margin-top: 0.8rem;
+    }
+    
+    a {
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        padding: 0.6rem;
+    }
+    
+    .card {
+        padding: 0.4rem 0.6rem;
+        border-radius: 0.8rem;
+        font-size: 0.85rem;
     }
 }
